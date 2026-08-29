@@ -1,0 +1,46 @@
+Microsoft Certified: Azure AI Fundamentals
+Microsoft
+Issued Jun 2026
+Credential ID 3A9B8B1F76084307
+
+
+Certificate of completion: Claude 101
+Anthropic
+Issued Mar 2026
+Credential ID t9s53dzcc327
+
+
+CS50's Introduction to Computer Science
+Harvard University
+Issued Dec 2025
+Credential ID 5c9f0637-03e6-4ee8-9c5d-889ab4e8d857
+
+
+AI Essentials: Theory and Practice
+University of the Philippines Open University
+Issued Jun 2025
+
+
+Participant – WarFrames: Where Design Meets Data (41st CS Week, UPLB)
+University of the Philippines Los Baños
+Issued Mar 2025
+
+projects:
+https://lancelet.vercel.app/
+https://unofficial-lord-of-the-mysteries.vercel.app/
+https://xg-inventory-management-system-frontend.onrender.com
+
+Lance Christian C. Crucis
+
+3rd-Year BS Computer Science Student
+Cavite State University — Silang Campus
+Dasmariñas, Cavite, Philippines
+GitHub: github.com/lancecrucis
+
+  FRONTEND        React 19, Tailwind CSS, spline3d
+
+    BACKEND       Node.js, Express.js, REST APIs
+
+    CLOUD/PLATFORMS Supabase, Firebase, Vercel, Render
+ 
+  LANGUAGES       JavaScript, TypeScript, Python

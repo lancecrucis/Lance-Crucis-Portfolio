@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #ffffff;
+  transition: background-color 0.2s;
+}
+
+.dark body {
+  background: #111111;
+}
