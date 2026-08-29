@@ -12,6 +12,7 @@ const projects = [
   { name: 'lancelet Flashcards', url: 'https://lancelet.vercel.app/', img: '/projects/lanceletwebsite.png', video: '/videos/lancelet vid.mp4' },
   { name: 'Unofficial Lord of the Mysteries', url: 'https://unofficial-lord-of-the-mysteries.vercel.app/', img: '/projects/lotm website.png', video: '/videos/lotm vid.mp4' },
   { name: 'Valorant Computer Vision Skin Classifier', url: '', img: '/projects/valorant.png', video: '/videos/valorant vid.mp4', dev: true },
+   { name: 'XG Inventory System', url: 'https://xg-inventory-management-system-frontend.onrender.com', img: '/projects/xg inventory.png', video: '/videos/xg inventory vid.mp4'},
 ]
 
 const certifications = [
@@ -23,6 +24,7 @@ const certifications = [
    { title: 'De la Salle Univeristy TECH-A MUNA Episode 9', org: 'Animo Labs HQ, De La Salle University - Manila', date: 'Issued Jun 2026', img: '/certs/tech a muna.jpg' },
     { title: 'AB TALKS ViCoDathon 2026', org: 'India', date: 'Issued Aug 2026', img: '/certs/ab talks.jpg' },
      { title: 'FUTUREHACKS 7 2025', org: 'AiGoLeaning', date: 'Issued Feb 2025', img: '/certs/future hacks.png' },
+      { title: 'Responsive Web Design', org: 'FreeCodeCamp', date: 'Issued Apr 2025', img: '/certs/freecodecamp.jpg' },
 ]
 
 function TiltProfilePic() {
