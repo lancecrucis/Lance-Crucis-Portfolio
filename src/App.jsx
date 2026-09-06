@@ -13,6 +13,7 @@ const projects = [
   { name: 'Unofficial Lord of the Mysteries', url: 'https://unofficial-lord-of-the-mysteries.vercel.app/', img: '/projects/lotm website.png', video: '/videos/lotm vid.mp4' },
   { name: 'Valorant Computer Vision Skin Classifier', url: '', img: '/projects/valorant.png', video: '/videos/valorant vid.mp4', dev: true },
    { name: 'XG Inventory System', url: 'https://xg-inventory-management-system-frontend.onrender.com', img: '/projects/xg inventory.png', video: '/videos/xg inventory vid.mp4'},
+   { name: 'Youtube Frame Extractor v1', url: '', img: '/projects/youtube frame extractor.png', video: '/videos/youtube frame vid.mp4', dev: true, darkText: true, github: 'https://github.com/lancecrucis/Youtube-Video-Frame-Extracter-for-ML-Dataset' },
 ]
 
 const certifications = [
@@ -78,11 +79,20 @@ function TiltProfilePic() {
 
 function ProjectCard({ project }) {
   const [hovered, setHovered] = useState(false)
+  const dark = project.darkText
 
-  const Wrapper = project.dev ? 'div' : 'a'
-  const wrapperProps = project.dev
+  const Wrapper = project.dev && !project.github ? 'div' : 'a'
+  const linkUrl = project.github || project.url
+  const wrapperProps = project.dev && !project.github
     ? { className: 'relative block w-full rounded-2xl overflow-hidden h-[320px] max-md:h-[240px] group cursor-default' }
-    : { href: project.url, target: '_blank', rel: 'noopener noreferrer', className: 'relative block w-full rounded-2xl overflow-hidden h-[320px] max-md:h-[240px] group' }
+    : { href: linkUrl, target: '_blank', rel: 'noopener noreferrer', className: 'relative block w-full rounded-2xl overflow-hidden h-[320px] max-md:h-[240px] group' }
+
+  const titleClass = dark
+    ? 'text-[#111] text-3xl max-md:text-xl font-bold max-w-sm leading-tight'
+    : 'text-white text-3xl max-md:text-xl font-bold max-w-sm leading-tight'
+  const subClass = dark
+    ? 'text-[#555] text-base max-md:text-sm mt-2'
+    : 'text-white/70 text-base max-md:text-sm mt-2'
 
   return (
     <Wrapper
@@ -104,18 +114,23 @@ function ProjectCard({ project }) {
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovered ? 'opacity-100' : 'opacity-0'}`}
       />
       <div className="relative z-10 flex flex-col items-start justify-start h-full pt-10 pl-10 max-md:pt-6 max-md:pl-6">
-        <h4 className="text-white text-3xl max-md:text-xl font-bold max-w-sm leading-tight">
+        <h4 className={titleClass}>
           {project.name}
         </h4>
-        <p className="text-white/70 text-base max-md:text-sm mt-2">
-          {project.dev ? 'Currently in development' : 'The project is Live!'}
+        <p className={subClass}>
+          {project.dev && project.github ? 'Clone GitHub Repo' : project.dev ? 'Currently in development' : 'The project is Live!'}
         </p>
-        {!project.dev && (
+        {!project.dev && !project.github && (
           <span className="mt-5 max-md:mt-3 inline-block bg-white/20 backdrop-blur-sm text-white text-base max-md:text-sm font-medium px-6 max-md:px-4 py-2.5 max-md:py-2 rounded-full border border-white/30 group-hover:bg-white/30 transition-colors">
             Visit Site &rarr;
           </span>
         )}
-        {project.dev && (
+        {project.github && (
+          <span className={`mt-5 max-md:mt-3 inline-block backdrop-blur-sm text-base max-md:text-sm font-medium px-6 max-md:px-4 py-2.5 max-md:py-2 rounded-full border transition-colors ${dark ? 'bg-black/10 text-[#111] border-black/20 group-hover:bg-black/20' : 'bg-white/20 text-white border-white/30 group-hover:bg-white/30'}`}>
+            GitHub &rarr;
+          </span>
+        )}
+        {project.dev && !project.github && (
           <span className="mt-5 max-md:mt-3 inline-block bg-white/10 backdrop-blur-sm text-white/60 text-base max-md:text-sm font-medium px-6 max-md:px-4 py-2.5 max-md:py-2 rounded-full border border-white/20">
             Not Live
           </span>
